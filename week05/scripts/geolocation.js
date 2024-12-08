@@ -4,7 +4,7 @@ const mapDiv = document.getElementById('map');
 const getLocationBtn = document.getElementById('getLocation');
 
 // Google Maps API Key (Replace with your key if using Google Maps)
-const GOOGLE_MAPS_API_KEY = 'AIzaSyC_C9ING3B6KFDr2hTZn9yCoIbRR0npCUw';
+// const GOOGLE_MAPS_API_KEY = 'AIzaSyC_C9ING3B6KFDr2hTZn9yCoIbRR0npCUw';
 
 // Function to initialize the map
 function initializeMap(latitude, longitude) {
