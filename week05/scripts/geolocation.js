@@ -4,6 +4,7 @@ const mapDiv = document.getElementById('map');
 const getLocationBtn = document.getElementById('getLocation');
 
 // Google Maps API Key (Replace with your key if using Google Maps)
+//Hide the API Key. When needed,remarked line 8, and then tha code would work.
 // const GOOGLE_MAPS_API_KEY = 'AIzaSyC_C9ING3B6KFDr2hTZn9yCoIbRR0npCUw';
 
 // Function to initialize the map
