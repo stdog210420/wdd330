@@ -1,0 +1,388 @@
+:root {
+    /* Color */
+    --primary-color: #5c5751;
+    --secondary-color: #03568C;
+    --accent1-color: #252928;
+    --accent2-color: #91393E;
+    --white-color: #fff;
+    /* Typography */
+    --font-headline: "Comic Neue", Lato, Helvetica;
+    --font-body: "Open Sans", Helvetica, sans-serif;
+    /* sizes */
+    --font-base: 18px;
+    --small-font: 0.8em;
+    --large-font: 1.2em;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--font-base);
+    background-color: var(--white-color);
+    overflow-wrap: break-word;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.headerfix {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.logo img {
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.logo:hover {
+    /*move 10 pixels to the right, and move 10 pixels down.*/
+    transform: translate(10px, 10px);
+}
+
+.search-box {
+    margin: 10px;
+    border-radius: 15px;
+
+}
+
+input {
+    border: solid 0.5px var(--primary-color);
+    /* Removes the default border */
+    outline: none;
+    /* Removes the outline when focused */
+    color: var(--white-color);
+    /* Adds a light, soft background color */
+    padding: 10px 15px;
+    /* Adds padding for spacing inside the input */
+    border-radius: 5px;
+    /* Rounds the corners */
+    box-shadow: inset 0 1px 3px rgba(17, 17, 17, 0.1);
+    /* Adds a subtle inner shadow for a recessed look */
+    font-size: 16px;
+    /* Sets a readable font size */
+    font-family: var(--font-body);
+    /* Applies a clean font style */
+    transition: all 0.3s ease;
+    /* Smooth transition for interactive effects */
+}
+
+input:focus {
+    border: solid 0.5px rgba(0, 123, 255, 0.5);
+    background-color: var(--white-color);
+    /* Changes the background color when focused */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Adds a glow-like effect when focused */
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 15px;
+    margin: auto;
+    display: block;
+    border: 0;
+    font-size: var(--large-font);
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+h1:hover {
+    color: var(--accent2-color);
+}
+
+.job-icon,
+.event-icon,
+.member-icon,
+.contact-icon {
+    width: 30%;
+    height: auto;
+}
+
+.job-link,
+.event-link,
+.member-link,
+.contact-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    color: inherit;
+}
+
+#menu {
+    text-decoration: none;
+    padding: .5rem .75rem;
+    width: 2rem;
+    border: 0;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    background-color: var(--white-color);
+}
+
+.navigation,
+.footer-link {
+    margin: 0;
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.navigation {
+    padding-right: 1rem;
+
+}
+
+
+
+
+.navigation a,
+.footer-link a {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    /* background-color: var(--nav-background-color); */
+    /* color: var(--primary-color); */
+}
+
+.navigation a:hover,
+.footer-link a:hover {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--accent2-color);
+    transform: translate(5px, 5px);
+}
+
+
+/* mobile view */
+@media screen and (max-width: 1023px) {
+    body {
+        font-size: 14px;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+    .job-icon,
+    .event-icon,
+    .member-icon,
+    .contact-icon {
+        width: 10%;
+
+    }
+
+    .headerfix,
+    .logo,
+    .job-cards,
+    footer,
+    .join-member,
+    .formarea,
+    .contact-form,
+    .event-section,
+    .job-area,
+    .bag-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form,
+    .formarea2 {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formarea2 {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .infro {
+        margin: 0 20px;
+        padding: 0 20px;
+    }
+
+    .formarea2 iframe {
+        width: 95%;
+        height: auto;
+
+    }
+
+    .job-list {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bag-cards {
+        margin: 0;
+        padding: 0;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .bag-cards img {
+        width: 80%;
+        height: auto;
+    }
+
+    .event-area {
+        margin-top: 120px;
+    }
+
+    .formarea,
+    .formarea2 {
+        display: block;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .benefits {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        padding: 0 20px;
+    }
+
+    .formarea2 {
+        text-align: center;
+    }
+
+    .form input[type="submit"] {
+        display: block;
+        align-self: center;
+        justify-content: center;
+        margin: 20px auto;
+    }
+
+    .form legend {
+        font-size: 1.5rem;
+    }
+
+
+    /* Responsive styling for smaller cells */
+    .table th,
+    .table td {
+        align-self: baseline;
+        justify-content: center;
+        text-align: center;
+        text-wrap: wrap;
+        margin: 0 5px;
+        padding: 5px;
+        font-size: 0.9em;
+    }
+
+    .title,
+    .card-msg,
+    .card-msg2 {
+        font-size: 0.5rem;
+        /* 減小字體大小 */
+    }
+
+    .hero-msg {
+        display: block;
+        text-align: center;
+        width: 90%;
+        margin-top: 100px;
+    }
+
+    .footer-area {
+        margin: 1rem;
+        align-self: center;
+        justify-items: center;
+        font-size: 0.5rem;
+    }
+
+    .join,
+    .join-area,
+    .join-link {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .join-member {
+        align-items: center;
+    }
+
+
+    .join-link {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .join-title {
+        padding: 0.5rem;
+        margin: 0;
+    }
+
+    /*    main,.hero */
+    .navigation a {
+        display: none;
+    }
+
+    .navigation {
+        background-color: var(--white-color);
+        gap: 0;
+        display: block;
+    }
+
+    #menu::before {
+        content: "☰";
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    #menu.open::before {
+        content: "❌";
+    }
+
+    #menu.open {
+        display: block;
+
+    }
+
+
+    .navigation.open a {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+
+}
