@@ -1,0 +1,242 @@
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #5c5751;
+    --secondary-color: #DB998F;
+    --accent1-color: #2B1109;
+    --accent2-color: #91393E;
+
+
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Comic Neue", Lato, Helvetica;
+    --paragraph-font: "Open Sans", Helvetica, sans-serif;
+
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: #91393E;
+    /* headlines on a white background */
+    --headline-color-on-color: #2B1109;
+    /* headlines on a colored background */
+    --paragraph-color-on-white: #91393E;
+    /* paragraph text on a white background */
+    --paragraph-color-on-color: #2B1109;
+    /* paragraph text on a colored background */
+    --paragraph-background-color: #5c5751;
+    --nav-link-color: #91393E;
+    --nav-background-color: #5c5751;
+    --nav-hover-link-color: #DB998F;
+    --nav-hover-background-color: #fff;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    background-color: var(--nav-hover-background-color);
+    overflow-wrap: break-word;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: var(--heading-font);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--accent2-color);
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1rem;
+    /* border-width: 80%; */
+    border: 30px double var(--nav-hover-background-color);
+    box-shadow: 2px 2px 5px #807c7c;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.logo {
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-family: var(--paragraph-font);
+}
+
+.hero {
+    grid-column: 1/3;
+    max-width: 60%;
+    height: auto;
+    margin: 10px;
+    justify-self: center;
+    align-items: center;
+}
+
+.hero img {
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    color: var(--nav-hover-background-color);
+}
+
+
+main p {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    color: var(--accent1-color);
+}
+
+main h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    color: var(--accent1-color);
+}
+
+
+.name {
+    grid-column: 1/3;
+    font-size: 2rem;
+    align-content: center;
+    justify-self: center;
+    text-wrap: wrap;
+}
+
+
+.color {
+    grid-column: 1/2;
+    color: var(--accent1-color);
+    align-content: center;
+    justify-self: center;
+    margin: 0.5rem;
+
+}
+
+.colors {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    border-collapse: collapse;
+    /* align-items: center;
+    justify-content: center; */
+    background-color: var(--nav-hover-background-color);
+}
+
+.colors th,
+.colors td {
+    border: 2px solid var(--primary-color);
+    padding: 10px;
+    text-align: center;
+}
+
+.typography {
+    grid-column: 2/3;
+    align-items: center;
+    justify-self: center;
+
+}
+
+
+.primary {
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.secondary {
+    background-color: var(--nav-hover-link-color);
+    padding: 10px;
+}
+
+.accent1 {
+    background-color: var(--accent1-color);
+    padding: 10px;
+}
+
+.accent2 {
+    background-color: var(--accent2-color);
+    padding: 10px;
+}
+
+.accent1,
+.accent2,
+.primary {
+    color: var(--nav-hover-background-color);
+}
+
+.wireframe {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+}
+
+h6 {
+    grid-column: 1/4;
+}
+
+figcaption {
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
+
+footer {
+    padding: 5px;
+    background-color: var(--accent2-color);
+    text-align: center;
+    color: var(--nav-hover-background-color);
+}
+
+/* mobile view */
+@media screen and (max-width: 1023px) {
+    body {
+        font-size: 14px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    img {
+        align-self: center;
+        justify-items: center;
+    }
+
+    header,
+    .wireframe,
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wireframe img {
+        width: auto;
+        height: auto;
+        max-width: 90%;
+    }
+
+
+}
